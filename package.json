@@ -1,0 +1,23 @@
+{
+  "name": "scroll-cascade-navbar",
+  "version": "1.0.0",
+  "description": "a cascade navbar which has collapse effects when scrolling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvytlx/scroll-cascade-navbar.git"
+  },
+  "keywords": [
+    "component",
+    "js"
+  ],
+  "author": "Xiao Tan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tvytlx/scroll-cascade-navbar/issues"
+  },
+  "homepage": "https://github.com/tvytlx/scroll-cascade-navbar#readme"
+}
