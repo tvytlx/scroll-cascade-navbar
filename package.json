@@ -1,6 +1,6 @@
 {
   "name": "scroll-cascade-navbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a cascade navbar which has collapse effects when scrolling",
   "main": "dist/cascade-navbar.umd.js",
   "module": "dist/cascade-navbar.esm.js",
