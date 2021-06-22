@@ -1,5 +1,8 @@
 <template>
-  <div class="example">{{ msg }}</div>
+  <div class="example">
+    {{ msg }}
+    <span class="inner">123</span>
+  </div>
 </template>
 
 <script>
@@ -14,7 +17,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .example {
   color: red;
 }

@@ -1,6 +1,6 @@
 {
   "name": "scroll-cascade-navbar",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "a cascade navbar which has collapse effects when scrolling",
   "main": "dist/cascade-navbar.umd.js",
   "module": "dist/cascade-navbar.esm.js",
@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/tvytlx/scroll-cascade-navbar/issues"
   },
-  "homepage": "https://github.com/tvytlx/scroll-cascade-navbar#readme"
+  "homepage": "https://github.com/tvytlx/scroll-cascade-navbar#readme",
+  "dependencies": {
+    "rollup-plugin-postcss": "^4.0.0"
+  }
 }
