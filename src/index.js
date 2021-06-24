@@ -1,7 +1,6 @@
 // Import vue component
 import component from "./CascadeNavbar.vue";
 
-// Declare install function executed by Vue.use()
 component.install = (app) => {
   app.component(component.name, component);
 };

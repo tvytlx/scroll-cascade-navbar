@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rollup Bundle</title>
+  </head>
+  <body>
+    <div id="app">
+      <cascade-navbar :banner-height="50" :navbar-height="100">
+        <template #navbar> <div class="navbar">导航栏</div> </template>
+        <template #middle
+          ><main>
+            部分正文
+            <br />
+            {{content.repeat(3)}}
+          </main></template
+        >
+        <template #banner> <div class="banner">横幅</div> </template>
+      </cascade-navbar>
+      <main>
+        正文<br />
+        {{content.repeat(20)}}
+      </main>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.js"></script>
+    <script src="cascade-navbar.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 200vh;
+      }
+      #app {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .navbar {
+        height: 100%;
+        background-color: red;
+      }
+      .banner {
+        height: 100%;
+        background-color: pink;
+      }
+      main {
+        display: block;
+        flex-grow: 1;
+        height: 100%;
+        background-color: yellow;
+      }
+    </style>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+        commodi, quo soluta, ratione recusandae facere reprehenderit similique
+        aliquid, hic voluptatum architecto dolore. Quos placeat odio nulla velit
+        voluptas quisquam ex`,
+          };
+        },
+      });
+      app.use(CascadeNavbar.default);
+      app.mount("#app");
+    </script>
+  </body>
+</html>

@@ -4,29 +4,27 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.CascadeNavbar = {}, global.Vue));
 }(this, (function (exports, vue) { 'use strict';
 
-  var script = {
-    name: "CascadeNavbar",
-    data() {
-      return {
-        msg: "Hello world!",
-      };
-    },
-    methods: {},
-  };
-
-  const _withId = /*#__PURE__*/vue.withScopeId("data-v-4bd752bb");
-
   vue.pushScopeId("data-v-4bd752bb");
   const _hoisted_1 = { class: "example" };
   const _hoisted_2 = /*#__PURE__*/vue.createVNode("span", { class: "inner" }, "123", -1 /* HOISTED */);
   vue.popScopeId();
 
-  const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
+
+  var script = {
+    expose: [],
+    setup(__props) {
+
+  const msg = vue.ref("hello");
+
+  return (_ctx, _cache) => {
     return (vue.openBlock(), vue.createBlock("div", _hoisted_1, [
-      vue.createTextVNode(vue.toDisplayString($data.msg) + " ", 1 /* TEXT */),
+      vue.createTextVNode(vue.toDisplayString(msg.value) + " ", 1 /* TEXT */),
       _hoisted_2
     ]))
-  });
+  }
+  }
+
+  };
 
   function styleInject(css, ref) {
     if (ref === void 0) ref = {};
@@ -60,7 +58,6 @@
   var css_248z = "\n.example[data-v-4bd752bb] {\r\n  color: red;\n}\r\n";
   styleInject(css_248z);
 
-  script.render = render;
   script.__scopeId = "data-v-4bd752bb";
   script.__file = "src/CascadeNavbar.vue";
 

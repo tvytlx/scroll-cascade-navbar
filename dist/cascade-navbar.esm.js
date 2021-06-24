@@ -1,28 +1,26 @@
-import { pushScopeId, popScopeId, openBlock, createBlock, createTextVNode, toDisplayString, withScopeId, createVNode } from 'vue';
-
-var script = {
-  name: "CascadeNavbar",
-  data() {
-    return {
-      msg: "Hello world!",
-    };
-  },
-  methods: {},
-};
-
-const _withId = /*#__PURE__*/withScopeId("data-v-4bd752bb");
+import { ref, openBlock, createBlock, createTextVNode, toDisplayString, pushScopeId, createVNode, popScopeId } from 'vue';
 
 pushScopeId("data-v-4bd752bb");
 const _hoisted_1 = { class: "example" };
 const _hoisted_2 = /*#__PURE__*/createVNode("span", { class: "inner" }, "123", -1 /* HOISTED */);
 popScopeId();
 
-const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
+
+var script = {
+  expose: [],
+  setup(__props) {
+
+const msg = ref("hello");
+
+return (_ctx, _cache) => {
   return (openBlock(), createBlock("div", _hoisted_1, [
-    createTextVNode(toDisplayString($data.msg) + " ", 1 /* TEXT */),
+    createTextVNode(toDisplayString(msg.value) + " ", 1 /* TEXT */),
     _hoisted_2
   ]))
-});
+}
+}
+
+};
 
 function styleInject(css, ref) {
   if (ref === void 0) ref = {};
@@ -56,7 +54,6 @@ function styleInject(css, ref) {
 var css_248z = "\n.example[data-v-4bd752bb] {\r\n  color: red;\n}\r\n";
 styleInject(css_248z);
 
-script.render = render;
 script.__scopeId = "data-v-4bd752bb";
 script.__file = "src/CascadeNavbar.vue";
 
