@@ -1,6 +1,6 @@
 # scroll-cascade-navbar
 
-A cascade navbar which has collapse effects when scrolling.
+A cascade navbar which has collapse effects when scrolling. [example](https://scroll-cascade-navbar.vercel.app/)
 
 ## Install
 
