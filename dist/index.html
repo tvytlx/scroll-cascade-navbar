@@ -3,25 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Rollup Bundle</title>
-  </head>
-  <body>
-    <div id="app">
-      <cascade-navbar :banner-height="50" :navbar-height="100">
-        <template #navbar> <div class="navbar">导航栏</div> </template>
-        <template #middle
-          ><main>
-            部分正文
-            <br />
-            {{content.repeat(3)}}
-          </main></template
-        >
-        <template #banner> <div class="banner">横幅</div> </template>
-      </cascade-navbar>
-      <main>
-        正文<br />
-        {{content.repeat(20)}}
-      </main>
-    </div>
     <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.js"></script>
     <script src="cascade-navbar.min.js"></script>
     <style>
@@ -52,6 +33,25 @@
         background-color: yellow;
       }
     </style>
+  </head>
+  <body>
+    <div id="app">
+      <cascade-navbar :banner-height="50" :navbar-height="100">
+        <template #navbar> <div class="navbar">导航栏</div> </template>
+        <template #middle
+          ><main>
+            部分正文
+            <br />
+            {{content.repeat(3)}}
+          </main></template
+        >
+        <template #banner> <div class="banner">横幅</div> </template>
+      </cascade-navbar>
+      <main>
+        正文<br />
+        {{content.repeat(20)}}
+      </main>
+    </div>
     <script>
       const app = Vue.createApp({
         data() {
