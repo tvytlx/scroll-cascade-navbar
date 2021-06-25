@@ -6,7 +6,8 @@
   "module": "dist/cascade-navbar.esm.js",
   "unpkg": "dist/cascade-navbar.min.js",
   "scripts": {
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg & npm run build:example",
+    "build:example": "npm run build:unpkg && mv dist/cascade-navbar.min.js example",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/cascade-navbar.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/cascade-navbar.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/cascade-navbar.min.js",
